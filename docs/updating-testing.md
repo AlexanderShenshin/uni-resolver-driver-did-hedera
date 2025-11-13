@@ -99,7 +99,7 @@ To run this driver inside the Universal Resolver deployment, use the container i
     driver-did-hedera:
       image: ghcr.io/hiero-ledger/uni-resolver-driver-did-hedera:v0.1.6-86a309b
       ports:
-        - "8154:8080"
+        - "8165:8080"
   ```
 
 3) Update Universal Resolver README (optional but recommended)
@@ -115,7 +115,7 @@ docker compose up -d --force-recreate
 
 5) Test through Universal Resolver gateway
 ```bash
-curl -s "http://localhost:8154/1.0/identifiers/<your-did-hedera>" | jq
+curl -s "http://localhost:8165/1.0/identifiers/<your-did-hedera>" | jq
 ```
 
 Notes:

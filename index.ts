@@ -13,7 +13,10 @@ const app = new Elysia()
         console.log(`Resolved ${didDocument.id}`);
         return Response.json({
           didDocument,
-          didResolutionMetadata,
+          didResolutionMetadata: {
+              ...didResolutionMetadata,
+              contentType: 'application/ld+json'
+          },
           didDocumentMetadata
         }, {
           headers: {
